@@ -68,4 +68,4 @@ public class Main {
         else
             System.out.println("Вам " + Resyear + " лет " + Resmonth + " месяцев " + Resday + " дней");
     }
-}
+}# lab1
