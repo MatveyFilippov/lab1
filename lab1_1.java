@@ -56,7 +56,7 @@ public class Main {
         int Resyear = 2022 - Byear;
         int Resmonth = 0;
         int Resday = 0;
-        if (26 >= Bday)
+        if (25 >= Bday)
             Resday = 26 - Bday;
         else
             Resday = 30 - (Bday - 26);
@@ -64,7 +64,7 @@ public class Main {
             Resmonth = 11 - Bmonth;
         else
             Resmonth = 12 - (Bmonth - 11);
-        if (Resyear < 0 || Bmonth > 12 || Bday > 31)
+        if (Resyear < 0 || Bmonth > 12 || Bday > 31 || Bmonth < 0 || Bday < 0 || Byear < 0)
             System.out.println("Упс, где-то ошибка, я не могу сосчитать");
         else
             System.out.println("Вам " + Resyear + " лет " + Resmonth + " месяцев " + Resday + " дней");
