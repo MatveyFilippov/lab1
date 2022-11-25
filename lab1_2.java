@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Здесь можно узнать время года по вашему месяцу");
         System.out.print("Чтобы начать нажмите ENTER");
         String ENTER = in.nextLine();
         System.out.println();
@@ -20,7 +21,7 @@ public class Main {
                 else {
                     while (!check.hasNextInt()) {
                         System.out.println("Ошибка!");
-                        System.out.print("Введите месяц рождения: ");
+                        System.out.print("Введите месяц рождения числом: ");
                         check.next();
                     }
                     month = check.nextInt();
@@ -30,10 +31,26 @@ public class Main {
         else {
             while (!check.hasNextInt()) {
                 System.out.println("Ошибка!");
-                System.out.print("Введите месяц рождения: ");
+                System.out.print("Введите месяц рождения числом: ");
                 check.next();
             }
             month = check.nextInt();
+            while (month > 12 || month <= 0) {
+                System.out.println("Подсказка, месяцев всего 12");
+                System.out.print("Введите месяц рождения: ");
+                check.hasNextInt();
+                if (check.hasNextInt()) {
+                    month = check.nextInt();
+                }
+                else {
+                    while (!check.hasNextInt()) {
+                        System.out.println("Ошибка!");
+                        System.out.print("Введите месяц рождения: ");
+                        check.next();
+                    }
+                    month = check.nextInt();
+                }
+            }
         }
         System.out.println();
         if (month == 12 || month == 1 || month == 2)
